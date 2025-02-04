@@ -1,7 +1,7 @@
 package com.example.penjajahku
 
 import android.os.Parcelable
-import android.provider.Settings.Global.getString
+
 import kotlinx.parcelize.Parcelize
 
 
