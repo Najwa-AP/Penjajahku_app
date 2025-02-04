@@ -1,0 +1,1 @@
+an app i made as a final exam i take in the course "Learn to Make Android Applications for Beginners" held by Dicoding Indonesia. This app show a list and grid of colonizer (Governor-General of VOC & Dutch East Indies) as the main theme. project finish date: 31 December 2024
