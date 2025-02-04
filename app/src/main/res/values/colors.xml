@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="dua">#150578</color>
+    <color name="empat">#2E0219</color>
+    <color name="lima">#89043D</color>
+    <color name="enam">#FAA300</color>
+    <color name="tujuh">#EAE6E5</color>
+    <color name="delapan">#8FCB9B</color>
+
+</resources>
