@@ -30,10 +30,13 @@ class ColonizerDetailActivity : AppCompatActivity() {
 
         if (image != null) {
             Glide.with(this)
-                 .load(image)
+                .load(image)
+                .placeholder(android.R.drawable.ic_menu_gallery)
+                .error(android.R.drawable.stat_notify_error)
                 .transform(RoundedCorners(15))
-                 .into(tvImage)
+                .into(tvImage)
         } else {
+            tvImage.setImageResource(android.R.drawable.stat_notify_error)
             Toast.makeText(this, "Image tidak tersedia", Toast.LENGTH_SHORT).show()
         }
     }

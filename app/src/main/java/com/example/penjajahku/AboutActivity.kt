@@ -35,7 +35,7 @@ class AboutActivity : AppCompatActivity() {
 
         if (IMAGE != -1) {
             Glide.with(this)
-                 .load(R.drawable.pic)
+                 .load(R.drawable.me)
                  .transform(CircleCrop())
                  .into(aboutPic)
         } else {

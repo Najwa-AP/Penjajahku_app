@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -47,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             R.id.about -> {
                 val intent = Intent(this, AboutActivity::class.java).apply {
                     putExtra(AboutActivity.ABOUT_TITLE, R.string.title)
-                    putExtra(AboutActivity.ABOUT_IMAGE, R.drawable.pic)
+                    putExtra(AboutActivity.ABOUT_IMAGE, R.drawable.me)
                     putExtra(AboutActivity.ABOUT_NAME, R.string.name)
                     putExtra(AboutActivity.ABOUT_EMAIL, R.string.email)
                 }

@@ -26,16 +26,23 @@ class ListColonizerAdapter (private val listColonizer: ArrayList<Colonizer>) : R
       }
 
       override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-            val(name, description, photo) = listColonizer[position]
-            Glide.with(holder.itemView.context).load(photo).transform(RoundedCorners(15)).into(holder.binding.imgItemPhoto)
+            val (name, description, photo) = listColonizer[position]
+
+            // penanganan error & loading placeholder
+            Glide.with(holder.itemView.context)
+                  .load(photo)
+                  .placeholder(android.R.drawable.ic_menu_gallery) // Gambar sementara saat loading
+                  .error(android.R.drawable.stat_notify_error)      // Gambar pengganti jika link rusak
+                  .transform(RoundedCorners(15))
+                  .into(holder.binding.imgItemPhoto)
+
             holder.binding.tvItemName.text = name
             holder.binding.tvItemDescription.text = description
-            holder.itemView.setOnClickListener{
-                  Toast.makeText(holder.itemView.context, "kamu memilih " + listColonizer[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
-            }
 
-            holder.itemView.setOnClickListener {onItemClickCallback.onItemClicked(listColonizer[holder.adapterPosition]) }
-      } // revisi sebelumnya: onItemClickCallback.onItemClicked(listColonizer[holder.adapterPosition])
+            holder.itemView.setOnClickListener {
+                  onItemClickCallback.onItemClicked(listColonizer[holder.adapterPosition])
+            }
+      }
 
       interface OnItemClickCallback {
             fun onItemClicked(data: Colonizer)
